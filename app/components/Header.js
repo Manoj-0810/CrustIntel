@@ -10,8 +10,8 @@ export default function Header({ metrics, onSearchOpen, onSettingsOpen }) {
     try {
       const claude = localStorage.getItem('crustintel_claude_key');
       const crust = localStorage.getItem('crustintel_crust_key');
-      setHasClaudeKey(!!claude);
-      setHasCrustKey(!!crust);
+      setHasClaudeKey(!!(claude && claude.trim().length > 10));
+      setHasCrustKey(!!(crust && crust.trim().length > 10));
     } catch {}
   };
 
