@@ -4,6 +4,8 @@
 
 import { callCrustdata, hasValidCrustKey, getTrackedCompany, getCompetitors } from '@/lib/crustdata';
 
+export const maxDuration = 60;
+
 export async function POST(request) {
   let query = '';
   try {

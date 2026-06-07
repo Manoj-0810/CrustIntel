@@ -4,6 +4,8 @@
 
 import { getSignals } from '@/lib/crustdata';
 
+export const maxDuration = 60;
+
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const severity = searchParams.get('severity');

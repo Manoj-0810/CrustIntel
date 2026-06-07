@@ -4,6 +4,8 @@
 
 import { discoverCompetitors } from '@/lib/crustdata';
 
+export const maxDuration = 60;
+
 export async function POST(request) {
   try {
     const body = await request.json();

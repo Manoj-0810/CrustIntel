@@ -6,6 +6,8 @@
 import { analyzeDeepDive, hasValidClaudeKey, getMockSWOT } from '@/lib/ai';
 import { getCompetitors, hasValidCrustKey } from '@/lib/crustdata';
 
+export const maxDuration = 60;
+
 export async function POST(request) {
   try {
     const body = await request.json();
