@@ -383,7 +383,7 @@ export const maxDuration = 60;
 
 ## About
 
-Built by **[Your Name]** — technical submission for the Applied AI Engineer and Forward Deployed Engineer positions at Crustdata, June 2026.
+Built by Manoj R S — technical submission for the Applied AI Engineer and Forward Deployed Engineer positions at Crustdata, June 2026.
 
 Crustdata is backed by Y Combinator, General Catalyst, SV Angel, and A Capital, and powers AI agents for customers including Dharmesh Shah's agent.ai and Ryan Reynolds' MNTN. CrustIntel is a working proof that their core thesis — AI agents consuming structured business data autonomously — is already buildable today with the tools they have shipped.
 
