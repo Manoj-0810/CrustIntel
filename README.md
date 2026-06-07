@@ -1,6 +1,4 @@
-<div align="center">
-#CrustIntel
-<div align="center">
+# 🦀 CrustIntel
 
 ### Autonomous Competitive Intelligence — Built on Crustdata × Claude
 
