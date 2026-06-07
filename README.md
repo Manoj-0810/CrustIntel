@@ -103,19 +103,19 @@ callClaude({ systemPrompt, userPrompt, tools: CRUSTDATA_TOOLS })
 │                                                                  │
 │  Iter 1 — Claude reasons → stop_reason: "tool_use"              │
 │    └─ search_companies("apollo.io")                              │
-│         callCrustdata("screener/company/search", filters)        │
+│         callCrustdata("company/enrich", filters)                 │
 │         → { headcount: 1200, growth_6m: +8.3%, funding: $251M } │
 │         tool_result injected into messages[]                     │
 │                                                                  │
 │  Iter 2 — Claude reasons → stop_reason: "tool_use"              │
 │    └─ search_jobs("Apollo.io", department="ML")                  │
-│         callCrustdata("screener/job/search", filters)            │
+│         callCrustdata("job/search", filters)                     │
 │         → 34 open ML roles (signal: AI SDR product bet)          │
 │         tool_result injected                                     │
 │                                                                  │
 │  Iter 3 — Claude reasons → stop_reason: "tool_use"              │
 │    └─ get_funding_events("Apollo.io")                            │
-│         callCrustdata("screener/company/search", funding filter) │
+│         callCrustdata("company/enrich", funding filter)          │
 │         → $100M Series D, 2023 · lead: Sequoia                  │
 │         tool_result injected                                     │
 │                                                                  │
@@ -171,11 +171,11 @@ Every function returns a rich per-company mock response when no Claude key is pr
 Three Crustdata endpoints — five Claude-callable tools.
 
 ```
-POST /screener/company/search  →  search_companies()        headcount, funding, growth
+POST /company/enrich           →  search_companies()        headcount, funding, growth
                                →  get_company_headcount()   real-time trend data
                                →  get_funding_events()      latest round, investors
 
-POST /screener/job/search      →  search_jobs()             open roles → strategy signals
+POST /job/search               →  search_jobs()             open roles → strategy signals
 
 POST /screener/person/search   →  search_people()           exec moves, talent flow
 ```
